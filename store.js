@@ -7,7 +7,7 @@ var folderStructure = {
     type: "folder",
     parent: null,
     child: [
-        {
+       /* {
             id: "item-1",
             name: "target",
             level: 1,
@@ -64,7 +64,7 @@ var folderStructure = {
                     ]
                 }
             ],
-        }
+        } */
     ],
 }
 
