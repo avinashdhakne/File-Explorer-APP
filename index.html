@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FILE EXPLORER</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="index.js"></script>
+    <script src="operation.js"></script>
+    <script src="store.js"></script>
+    <script src="util.js"></script>
+  </head>
+
+  <body onload="sudoMain()">
+    <div id="window">
+      <!-- header  -->
+      <div id="header">
+        <div id="title-bar">TITLE</div>
+        <div id="menu-bar">MENU</div>
+        <div id="utility-bar">
+          utility
+          <div id="path-bar">path</div>
+          <div id="search-bar">search</div>
+        </div>
+      </div>
+
+      <!-- body  -->
+      <div id="body">
+        <!-- explore files  -->
+        <label for="input-item-name"> Enter File/Folder Name: </label>
+        <input type="text" id="input-item-name">
+
+        <div id="file-explorer">
+        
+        </div>
+
+        <!-- preview folders  -->
+        <div id="folder-preview"></div>
+      </div>
+
+      <!-- footer  -->
+      <div id="footer">FOOTER</div>
+    </div>
+  </body>
+</html>

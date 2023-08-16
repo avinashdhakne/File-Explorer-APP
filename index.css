@@ -1,0 +1,45 @@
+#window {
+  height: 100vh;
+  width: 100vw;
+  border: 1px black solid;
+}
+
+#header * {
+  border: 1px black solid;
+  height: 25px;
+  width: 100vw;
+}
+
+#utility-bar div {
+  width: 40%;
+  display: inline;
+  float: left;
+}
+
+#body {
+  border: 1px black solid;
+  height: calc(100vh - 75px);
+  width: 100vw;
+}
+
+#footer {
+  border: 1px solid black;
+  height: 25px;
+  width: 100vw;
+}
+
+#file-explorer {
+  width: 50vh;
+}
+
+.item {
+  padding: 3px;
+  margin-left: 5%;
+  border: 1px solid black;
+}
+
+.expand-collapse-icon img {
+  transform: rotate(-90deg);
+  background-color: aqua;
+}
+
