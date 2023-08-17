@@ -1,70 +1,70 @@
 // reference of state 
 
 var folderStructure = {
-    id: "item-0",
+    id: "Item-0",
     level: 0,
     name: "ROOT",
     type: "folder",
     parent: null,
     child: [
-       /* {
-            id: "item-1",
-            name: "target",
+        {
+            id: "Item-1",
+            name: "Folder-1",
             level: 1,
-            parent: "item-0",
+            parent: "Item-0",
             child: [
                 {
-                    id: "item-8",
-                    name: "file2",
+                    id: "Item-2",
+                    name: "File-1",
                     level: 3,
-                    type: "folder",
-                    parent: "item-1",
-                    child: []
+                    type: "file",
+                    parent: "Item-1",
+                    child: null
                 }],
             type: "folder"
         },
         {
-            id: "item-5",
-            name: "file2",
+            id: "Item-3",
+            name: "File-1",
             level: 3,
-            type: "folder",
-            parent: "item-0",
-            child: []
+            type: "file",
+            parent: "Item-0",
+            child: null
         },
         {
-            id: "item-2",
-            name: "file1",
+            id: "Item-4",
+            name: "Folder-2",
             level: 1,
             type: "folder",
-            parent:"item-0",
+            parent:"Item-0",
             child: [
                 { 
-                    id: "item-3",
-                    name: "file2",
+                    id: "Item-5",
+                    name: "File-3",
                     level: 3,
                     type: "folder",
-                    parent: "item-2",
+                    parent: "Item-2",
                     child: []
                 },
                 {
-                    id: "item-4",
-                    name: "file2",
+                    id: "Item-6",
+                    name: "Folder-4",
                     level: 3,
                     type: "folder",
-                    parent: "item-2",
+                    parent: "Item-2",
                     child: [
                         {
-                            id: "item-7",
-                            name: "file2",
+                            id: "Item-7",
+                            name: "File-2",
                             level: 3,
                             type: "folder",
-                            parent: "item-4",
+                            parent: "Item-4",
                             child: []
                         }
                     ]
                 }
             ],
-        } */
+        }
     ],
 }
 

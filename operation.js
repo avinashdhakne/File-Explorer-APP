@@ -1,14 +1,16 @@
 // impure functions
-let itemId = 1;
+let itemId = 100;
 
 let incrementItemId = () => {
     itemId = itemId + 1;
 }
 
 // create new file
-let createFile = (event) => {
+let createFile = (event, type) => {
+    console.log("type of file", type)
     let itemName = document.getElementById("input-item-name").value
     let itemParent = event.target.parentNode.parentNode.parentNode;
+    
     let parentDataNode = findItem(folderStructure, itemParent.id);
 
     // We can append files into the another files 
@@ -18,15 +20,16 @@ let createFile = (event) => {
     }
 
     let newItem = {
-        id: "item-" + itemId,
+        id: "Item-" + itemId,
         name: itemName,
         level: parentDataNode.level + 1,
-        type: "file",
-        child: null,
+        type: type,
+        child: (type == "file") ? null: [],
         parent: itemParent.id
     }
 
-    console.log(newItem)
+    console.log(document.getElementById("input-item-name"))
+    console.log("item added: ", newItem, "| of type: ", type, "| with file name: ", itemName)
     parentDataNode.child.push(newItem)
 
     // increment item id and clean input field 
@@ -35,7 +38,7 @@ let createFile = (event) => {
     refreshFolderItems(itemParent.id)
 }
 
-// create new folder
+/* // create new folder
 let createFolder = (event) => {
     let itemName = document.getElementById("input-item-name").value
     let itemParent = event.target.parentNode.parentNode.parentNode;
@@ -57,13 +60,13 @@ let createFolder = (event) => {
     incrementItemId()
     cleanInputField()
     refreshFolderItems(itemParent.id)
-}
+} */
 
 let deleteItem = (event) => {
     let itemParentId = event.target.parentNode.parentNode.parentNode.id;
-    console.log("deleting: ", itemParentId)
     deleteItemById(folderStructure, itemParentId)
     refreshFolderItems(event.target.parentNode.parentNode.parentNode.parentNode.parentNode.id)
+    console.log("deleted: ", itemParentId)
 }
 
 let deleteItemById = (items, index) => {

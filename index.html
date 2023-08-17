@@ -13,27 +13,55 @@
     <div id="window">
       <!-- header  -->
       <div id="header">
-        <div id="title-bar">TITLE</div>
-        <div id="menu-bar">MENU</div>
+        <!-- Title bar -->
+        <div id="title-bar">
+          <span
+            ><img
+              id="title-bar-icon"
+              src="static/folder.png"
+              alt=""
+              height="15px"
+          /></span>
+          <span><label id="title-bar-label">File Explorer</label></span>
+        </div>
+
+        <!-- menu bar  -->
+        <div id="menu-bar">
+          <span>File</span>
+          <span>Home</span>
+          <span>View</span>
+        </div>
+
+        <!-- utility-bar  -->
         <div id="utility-bar">
-          utility
-          <div id="path-bar">path</div>
-          <div id="search-bar">search</div>
+          <span id="path-bar">
+            <label id="path-bar-label" for="">Path </label>
+            <span id="path-text-field">Root:\</span>
+          </span>
+
+          <span id="search-bar">
+            <input
+              type="text"
+              id="search-field"
+              placeholder="search files (press enter to search)"
+            />
+          </span>
         </div>
       </div>
 
-      <!-- body  -->
-      <div id="body">
-        <!-- explore files  -->
-        <label for="input-item-name"> Enter File/Folder Name: </label>
-        <input type="text" id="input-item-name">
+      <div id="separator"></div>
 
+      <!-- body  -->
+      <div id="display">
+        <!-- explore files  -->
         <div id="file-explorer">
-        
+          <div>
+            <input id="input-item-name" type="text" placeholder="Enter File/Folder Name" />
+          </div>
         </div>
 
         <!-- preview folders  -->
-        <div id="folder-preview"></div>
+        <div id="search-results"></div>
       </div>
 
       <!-- footer  -->
